@@ -22,17 +22,21 @@ let tokenGeneration = function(username, password) {
     });
 };
 
-let idValidation = function() {
+let idValidation = function(id) {
     it("ID Validation", async function() {
         return request(endPoints.AirPorts.base).get(endPoints.AirPorts.getSpecificAirportDetails)
-        expect(response.body.data.id).equals(reqData.KIX.ID)
+        .then(response =>{
+            expect(response.body.data.id).equals(id)
+        })
     });
 };
 
-let nameValidation = function() {
+let nameValidation = function(name) {
     it("Name Validation", async function() {
         return request(endPoints.AirPorts.base).get(endPoints.AirPorts.getSpecificAirportDetails)
-        expect(response.body.data.name).equals(reqData.KIX.name)
+        .then(response =>{
+            expect(response.body.data.attributes.name).equals(name)
+        })
     });
 };
 

@@ -3,7 +3,7 @@ module.exports = {
         "token":"QDaey1KXWwEMSs5cTMaLw9eP"
     },
     KIX:{
-        "ID": "KIX1",
+        "ID": "KIX",
         "name": "Kansai International Airport",
         "city": "Osaka"
     },
